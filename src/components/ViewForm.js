@@ -3,7 +3,7 @@ import classes from "../styles/CreateForm.module.css";
 import { useState, useReducer } from "react";
 import axios from "axios";
 
-const base_url = "http://127.0.0.1:8000/form/application-forms/";
+const base_url = "http://127.0.0.1:5000/form/application-forms/";
 function CreateForm() {
   const [status, setstatus] = useState("applied");
   const [is_hostellite, setis_hostellite] = useState("");
