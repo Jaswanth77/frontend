@@ -8,9 +8,15 @@
 }
 
 .header {
+  position: sticky;
+  top: 0px;
+  height:110px;
   width: 100%;
   text-align: center;
-  background-color: rgb(195, 195, 247);
+  background: #E0EAFC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
 }
 .header h1 {
   font-size: 900;
@@ -21,8 +27,14 @@
   margin-top: 0px;
 }
 .navbarContainer {
+  top: 110px;
+  height:80px;
+  position: sticky;
   width: 100%;
   padding: 0px;
+  background: #E0EAFC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .navbar {
@@ -30,7 +42,6 @@
   display: flex;
   justify-content: center;
   padding: 10px;
-  background-color: rgb(206, 206, 249);
   justify-content: space-evenly;
   margin: 0px;
 }
@@ -47,6 +58,7 @@
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .navbar button:hover {
@@ -56,7 +68,17 @@
 .body {
   width: 95%;
   margin: auto;
-  background-color: #f6f8ff;
   padding: 40px 20px;
   padding-top: 0px;
+}
+.header_img{
+  width:100px;
+  height: 100px;
+  background-image: url("../assets/logo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 5px;
+}
+.header_div{
+  margin:auto;
 }

@@ -4,16 +4,14 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #b9e1fd;
-  border-radius: 5px;
+  border-radius: 10px;
   padding-bottom: 20px;
   margin-bottom: 0px;
   margin-top: 20px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 .infoHeading {
-  background-color: #cbc9ff;
-  padding: 10px 0px;
-  margin-left: 20px;
+  margin-left: 55px;
   padding-left: 10px;
 }
 
@@ -31,10 +29,10 @@ h2 {
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   color: #333333;
   font-size: 16px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
   transition: box-shadow 0.3s ease;
 }
 .formElement select {
@@ -43,10 +41,9 @@ h2 {
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: #f1f1f1;
-  color: #333333;
+  background-color: #ffffff;
   font-size: 16px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
   transition: box-shadow 0.3s ease;
 }
 .formElement textarea {
@@ -55,38 +52,36 @@ h2 {
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: #f1f1f1;
-  color: #333333;
+  background-color: #ffffff;
   font-size: 16px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
   transition: box-shadow 0.3s ease;
 }
 
 .infoGroup label {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-top:10px;
+  margin-bottom: 20px;
 }
-
 .btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #b9e1fd;
   margin-top: 0px;
   padding: 30px 0px;
 }
 
 .btn button {
-  width: 40%;
+  width: fit-content;
   display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
   text-align: center;
   text-decoration: none;
-  background-color: #4c86af;
+  background-color: #407cff;
   color: #ffffff;
-  border-radius: 4px;
+  border-radius: 5px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -102,15 +97,15 @@ h2 {
 
 /* status */
 .statusGroup {
-  margin-bottom: 20px;
-  background-color: #95d3ff;
-  border-radius: 5px;
+  margin-top:30px;
+  margin-bottom: 40px;
+  border-radius: 10px;
   padding-bottom: 20px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 .statusHeading {
   text-align: center;
   padding: 10px 0px;
-  background-color: #a0dbff;
 }
 
 .statusGroup > div {
@@ -122,16 +117,18 @@ h2 {
   display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #ccc;
-  color: #fff;
+  background-color: #d8d8d8;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   color: #000000;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
-
+.statusGroup button:hover{
+  background-color: #7883ff;
+}
 .statusGroup button.active {
-  background-color: #b6bcff; /* Change to the desired color when clicked */
+  background-color: #6a76fc; /* Change to the desired color when clicked */
 }
 
 /* hostellite */
@@ -154,7 +151,7 @@ h2 {
   display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #ccc;
+  background-color: #cacaca;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -164,26 +161,29 @@ h2 {
 }
 
 .hostellite button.active {
-  background-color: #a9b0ff; /* Change to the desired color when clicked */
+  background-color: #98a0f7; /* Change to the desired color when clicked */
+}
+.hostellite button:hover {
+  background-color: #666fdb;
 }
 .getBtn {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #b9e1fd;
   margin-top: 0px;
   padding: 30px 0px;
 }
 .getBtn > button {
-  width: 70%;
+  width: fit-content;
   display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
   text-align: center;
   text-decoration: none;
-  background-color: #4c86af;
+  background-color: #6d77ff;
   color: #ffffff;
   border-radius: 4px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
   border: none;
   cursor: pointer;
   margin-top: 10px;

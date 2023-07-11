@@ -81,7 +81,7 @@ function CreateForm() {
         <div className={classes.infoGroup}>
           <h2 className={classes.infoHeading}>Fetch Student Data</h2>
           <div className={classes.formElement}>
-            <label>Enter AR number</label>
+          <label>Enter AR number</label>
             <input
               type="number"
               name="ar_number"
@@ -210,18 +210,12 @@ function CreateForm() {
           </div>
           <div className={classes.formElement}>
             <label>Community</label>
-            <select
+            <input
+              type="text"
               name="community"
               disabled
               defaultValue={student_data.community}
-            >
-              <option value="OC">OC</option>
-              <option value="BC">BC</option>
-              <option value="MBC">MBC</option>
-              <option value="SC">SC</option>
-              <option value="SCA">SCA</option>
-              <option value="ST">ST</option>
-            </select>
+            />
           </div>
 
           <div className={classes.formElement}>
@@ -512,16 +506,12 @@ function CreateForm() {
 
           <div className={classes.formElement}>
             <label>Board of Study</label>
-            <select
+            <input
+              type="text"
               name="board_of_study"
               disabled
               defaultValue={student_data.board_of_study}
-            >
-              <option value="State">State</option>
-              <option value="CBSE">CBSE</option>
-              <option value="ICSE">ICSE</option>
-              <option value="Others">Others</option>
-            </select>
+            />
           </div>
 
           <div className={classes.formElement}>
