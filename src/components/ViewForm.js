@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import classes from "../styles/CreateForm.module.css";
-import { useState, useReducer } from "react";
+import { useState } from "react";
 import axios from "axios";
 
-const base_url = "http://127.0.0.1:5000/form/application-forms/";
+const base_url = "http://192.168.29.197:8888/form/application-forms/";
 function CreateForm() {
   const [status, setstatus] = useState("applied");
   const [is_hostellite, setis_hostellite] = useState("");
@@ -30,12 +30,12 @@ function CreateForm() {
       });
     event.preventDefault();
   }
-  console.log(student_data);
+  // console.log(student_data);
   useEffect(() => {
     setis_hostellite(student_data.is_hostellite);
     setstatus(student_data.status);
   }, [student_data]);
-  console.log(student_data.status);
+  // console.log(student_data.status);
   function handleFormSubmit(event) {
     event.preventDefault();
     console.log(status);
@@ -81,7 +81,7 @@ function CreateForm() {
         <div className={classes.infoGroup}>
           <h2 className={classes.infoHeading}>Fetch Student Data</h2>
           <div className={classes.formElement}>
-          <label>Enter AR number</label>
+          <label>Enter Application number</label>
             <input
               type="number"
               name="ar_number"
@@ -606,7 +606,7 @@ function CreateForm() {
           </div>
 
           <div className={classes.formElement}>
-            <label>NEET Year</label>
+            <label>NEET Year of Passing</label>
             <input
               type="number"
               name="neet_year"
@@ -676,46 +676,6 @@ function CreateForm() {
           </div>
 
           <div className={classes.formElement}>
-            <label>NEET Physics Mark</label>
-            <input
-              type="number"
-              name="neet_physics_mark"
-              disabled
-              defaultValue={student_data.neet_physics_mark}
-            />
-          </div>
-
-          <div className={classes.formElement}>
-            <label>NEET Chemistry Mark</label>
-            <input
-              type="number"
-              name="neet_chemistry_mark"
-              disabled
-              defaultValue={student_data.neet_chemistry_mark}
-            />
-          </div>
-
-          <div className={classes.formElement}>
-            <label>NEET Biology Mark</label>
-            <input
-              type="number"
-              name="neet_biology_mark"
-              disabled
-              defaultValue={student_data.neet_biology_mark}
-            />
-          </div>
-
-          <div className={classes.formElement}>
-            <label>NEET Total Mark</label>
-            <input
-              type="number"
-              name="neet_total_mark"
-              disabled
-              defaultValue={student_data.neet_total_mark}
-            />
-          </div>
-
-          <div className={classes.formElement}>
             <label>NEET Physics Percentile</label>
             <input
               type="number"
@@ -756,6 +716,16 @@ function CreateForm() {
               disabled
               step="0.0001"
               defaultValue={student_data.neet_total_percentile}
+            />
+          </div>
+
+          <div className={classes.formElement}>
+            <label>NEET Total Mark</label>
+            <input
+              type="number"
+              name="neet_total_mark"
+              disabled
+              defaultValue={student_data.neet_total_mark}
             />
           </div>
         </div>
