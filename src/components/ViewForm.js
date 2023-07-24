@@ -771,11 +771,20 @@ function CreateForm() {
 
           <div className={classes.link}>
             <a
-              href={student_data.allotment_order_sslc_certificate}
+              href={student_data.allotment_order_payment_certificate}
               target="_blank"
               rel="noopener noreferrer"
             >
-              View Allotment Order and Payment SSLC Certificate
+              View Allotment Order Certificate
+            </a>
+          </div>
+          <div className={classes.link}>
+            <a
+              href={student_data.sslc_certificate}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View SSLC Certificate
             </a>
           </div>
 

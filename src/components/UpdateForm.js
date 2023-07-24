@@ -726,12 +726,23 @@ function CreateForm() {
 
           <div className={classes.formElement}>
             <label>
-              Allotment Order and Payment Receipt SSLC Certificate (max 10MB)
+              Allotment Order (max 10MB)
             </label>
             <input
               type="file"
               accept=".pdf"
-              name="allotment_order_sslc_certificate"
+              name="allotment_order_payment_certificate"
+              maxsize={10485760}
+            />
+          </div>
+          <div className={classes.formElement}>
+            <label>
+              SSLC Certificate (max 10MB)
+            </label>
+            <input
+              type="file"
+              accept=".pdf"
+              name="sslc_certificate"
               maxsize={10485760}
             />
           </div>
