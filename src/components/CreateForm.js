@@ -2,7 +2,7 @@ import React from "react";
 import classes from "../styles/CreateForm.module.css";
 import { useState } from "react";
 import axios from "axios";
-const base_url = "http://192.168.29.197/form/application-forms/";
+const base_url = "http://192.168.0.29:8888/form/application-forms/";
 function CreateForm() {
   const [status, setstatus] = useState("applied");
   const [is_hostellite, setis_hostellite] = useState("");
@@ -168,6 +168,26 @@ function CreateForm() {
           <div className={classes.formElement}>
             <label>Date of Birth</label>
             <input type="date" name="date_of_birth" required/>
+          </div>
+
+          <div className={classes.formElement}>
+            <label>Course Type</label>
+            <input type="text" name="course_type" required/>
+          </div>
+
+          <div className={classes.formElement}>
+            <label>Aadhaar number</label>
+            <input type="text" name="aadhar_no" required/>
+          </div>
+
+          <div className={classes.formElement}>
+            <label>Start of Academic year</label>
+            <input type="text" name="academic_year_start" required/>
+          </div>
+
+          <div className={classes.formElement}>
+            <label>End of Academic year</label>
+            <input type="text" name="academic_year_end" required/>
           </div>
 
           <div className={classes.formElement}>

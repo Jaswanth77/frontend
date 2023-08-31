@@ -3,7 +3,7 @@ import classes from "../styles/CreateForm.module.css";
 import { useState } from "react";
 import axios from "axios";
 
-const base_url = "http://192.168.29.197/form/application-forms/";
+const base_url = "http://192.168.0.29:8888/form/application-forms/";
 function CreateForm() {
   const [status, setstatus] = useState("applied");
   const [is_hostellite, setis_hostellite] = useState("");
@@ -56,18 +56,6 @@ function CreateForm() {
           if (element.files[0]) {
             // Append the file itself
             formData.append(element.name, element.files[0]);
-          } else {
-            // Create a dummy file based on the supported file type
-            let dummyFile;
-            if (element.accept.includes("pdf")) {
-              dummyFile = new File(["Dummy PDF content"], "dummy.pdf", {
-                type: "application/pdf",
-              });
-            }
-            if (dummyFile) {
-              // Append the dummy file
-              formData.append(element.name, dummyFile);
-            }
           }
         } else {
           if (element.name !== "status" && element.name !== "is_hostellite")
@@ -182,6 +170,26 @@ function CreateForm() {
               name="date_of_birth"
               defaultValue={student_data.date_of_birth}
             />
+          </div>
+
+          <div className={classes.formElement}>
+            <label>Course Type</label>
+            <input type="text" name="course_type" defaultValue={student_data.course_type}/>
+          </div>
+
+          <div className={classes.formElement}>
+            <label>Aadhaar number</label>
+            <input type="text" name="aadhar_no" defaultValue={student_data.aadhar_no}/>
+          </div>
+
+          <div className={classes.formElement}>
+            <label>Start of Academic year</label>
+            <input type="text" name="academic_year_start" defaultValue={student_data.academic_year_start}/>
+          </div>
+
+          <div className={classes.formElement}>
+            <label>End of Academic year</label>
+            <input type="text" name="academic_year_end" defaultValue={student_data.academic_year_end}/>
           </div>
 
           <div className={classes.formElement}>
@@ -841,6 +849,7 @@ function CreateForm() {
           <div className={classes.formElement}>
             <label>Anti-ragging Bond by Student & Parent (max 10MB)</label>
             <input
+            defaultValue={student_data.anti_ragging_bond}
               type="file"
               accept=".pdf"
               name="anti_ragging_bond"

@@ -3,6 +3,8 @@ import { useState } from "react";
 import CreateForm from "./components/CreateForm";
 import UpdateForm from "./components/UpdateForm";
 import ViewForm from "./components/ViewForm";
+import ExcelView from "./components/Excel";
+
 function App() {
   const [currentPage, setCurrentPage] = useState(1);
   function handlePageChange(curPage) {
@@ -37,6 +39,11 @@ function App() {
               View Application
             </button>
           </li>
+          <li>
+            <button onClick={handlePageChange.bind(null, 4)}>
+              Download Excel
+            </button>
+          </li>
         </ul>
       </div>
       <div className={classes.body}>
@@ -46,7 +53,9 @@ function App() {
           <UpdateForm />
         ) : currentPage === 3 ? (
           <ViewForm />
-        ) : (
+        ) : currentPage === 4 ? (
+          <ExcelView/>
+        ):(
           <div></div>
         )}
       </div>
